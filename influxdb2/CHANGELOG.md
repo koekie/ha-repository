@@ -1,4 +1,4 @@
-## What’s changed - Release v1.0.5
+## What’s changed - Release v1.0.6
 
 ## 🚀 Enhancements
 
@@ -6,7 +6,7 @@
 
 ## 🧰 Maintenance
 
-- Fixes a permission problem with cont-init.d scripts
+- Fixes a permission problem with services.d
 
 ## ⬆️ Dependency updates
 
@@ -14,6 +14,7 @@
 
 ## 📖 Full v1 Branch Changes
 
+- v1.0.6 - Fixes a permission problem with services.d scripts
 - v1.0.5 - Fixes a permission problem with cont-init.d scripts
 - v1.0.4 - Upgrade InfluxDB 2.6.1, base image to 6.2.0 and add InfluxDB CLI
 - v1.0.3 - Upgrade InfluxDB 2.4.0, base image to 6.1.2 and add InfluxDB CLI
