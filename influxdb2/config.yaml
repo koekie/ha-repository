@@ -3,7 +3,7 @@ name: InfluxDB2
 version: 1.0.4
 slug: influxdb2
 description: Scalable datastore for metrics, events, and real-time analytics. Running InfluxDB v2.x.
-url: https://github.com/milad-soufastai/j-addon-influxdb2
+url: https://github.com/koekie/ha-repository
 panel_icon: mdi:chart-areaspline
 startup: services
 homeassistant: 0.92.0b2
