@@ -15,7 +15,7 @@ This add-on doesn't come from the commmunity store and needs to be added from a 
 
 1. Within Home Assistant, navigate to **Configuration** > ** Add-ons, Backups & Supervisor** 
 1. Click **ADD-ON STORE** > **Menu** (3 dot elipsis, top right) > **Repositories**
-1. Add the following Repository: https://github.com/Jays-Home-Assistant-Add-ons/repository
+1. Add the following Repository: https://github.com/koekie/ha-repository
 1. Install the InfluxDB2 add-on
 1. After install, click **Start**
 1. Check the logs tab to see if everything went well.

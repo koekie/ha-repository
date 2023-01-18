@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:6.1.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:6.2.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -13,7 +13,7 @@ RUN \
     && ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "aarch64" ]; then ARCH="arm64"; fi \
     \
-    && INFLUXDB="2.4.0" \
+    && INFLUXDB="2.6.1" \
     && curl -J -L -o /tmp/influxdb2.deb \
         "https://dl.influxdata.com/influxdb/releases/influxdb2-${INFLUXDB}-${ARCH}.deb" \
     \
@@ -53,7 +53,7 @@ LABEL \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
     org.opencontainers.image.vendor="Mils Home Assistant Add-ons" \
-    org.opencontainers.image.authors="Milad Soufastai <mils129@gmail.com>" \
+    org.opencontainers.image.authors="Marcel Koek <koek.marcel@gmail.com>" \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.url="https://github.com/milad-soufastai/repository" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \

@@ -26,7 +26,7 @@ This add-on isn't included in Home Assistant by default and needs to be added fr
 1. Add the following Repository
 
 ```txt
-https://github.com/Jays-Home-Assistant-Add-ons/repository
+https://github.com/koekie/ha-repository
 ```
 
 ## Add-ons provided by this repository
