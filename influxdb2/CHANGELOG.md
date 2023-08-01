@@ -1,4 +1,4 @@
-## What’s changed - Release v1.0.6
+## What’s changed - Release v1.0.7
 
 ## 🚀 Enhancements
 
