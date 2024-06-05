@@ -1,12 +1,12 @@
 ---
 name: InfluxDB2
-version: 1.1.0
+version: 1.1.1
 slug: influxdb2
 description: Scalable datastore for metrics, events, and real-time analytics. Running InfluxDB v2.x.
 url: https://github.com/koekie/ha-repository
 ingress: true
 ingress_port: 1337
-ingres_stream: true
+ingress_stream: true
 panel_icon: mdi:chart-areaspline
 startup: services
 homeassistant: 0.92.0b2
