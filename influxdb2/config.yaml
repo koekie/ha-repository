@@ -1,25 +1,37 @@
 ---
 name: InfluxDB2
-version: 1.0.7
+version: 1.1.0
 slug: influxdb2
 description: Scalable datastore for metrics, events, and real-time analytics. Running InfluxDB v2.x.
 url: https://github.com/koekie/ha-repository
+ingress: true
+ingress_port: 1337
+ingres_stream: true
 panel_icon: mdi:chart-areaspline
 startup: services
 homeassistant: 0.92.0b2
+webui: http://[HOST]:[PORT:8086]
 hassio_api: true
 arch:
   - aarch64
   - amd64
+  - armv7
+  - armhf
 init: false
 map:
   - share:rw
   - ssl
 ports:
+  #Currently not working because of missing LUA knowledge :-/
+  #80/tcp: null
   8086/tcp: 8086
 ports_description:
+  #Currently not working because of missing LUA knowledge :-/
+  #80/tcp: Web interface (Not required for Ingress)
   8086/tcp: InfluxDB server
 options:
+  log_level: info
+  influxd_log_level: warn
   reporting: true
   ssl: false
   certfile: fullchain.pem
@@ -27,6 +39,7 @@ options:
   envvars: []
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
+  influxd_log_level: list(debug|info|warn|error)?
   reporting: bool
   ssl: bool
   certfile: str

@@ -1,10 +1,12 @@
-#!/usr/bin/with-contenv bashio
+#!/command/with-contenv bashio
+# shellcheck shell=bash
 # ==============================================================================
-# Jays Home Assistant Add-on: InfluxDB2
+# Home Assistant Add-on: InfluxDB2
 # Runs the InfluxDB2 Server
 # ==============================================================================
 declare name
 declare value
+declare influxd_log_level
 
 for envvar in $(bashio::config 'envvars|keys'); do
     name=$(bashio::config "envvars[${envvar}].name")
@@ -13,7 +15,12 @@ for envvar in $(bashio::config 'envvars|keys'); do
     export "${name}=${value}"
 done
 
+
+influxd_log_level=$(bashio::config 'influxd_log_level')
+bashio::log.info "influxd_log_level = ${influxd_log_level}"
+
 export INFLUXD_CONFIG_PATH=/etc/influxdb
+export INFLUXD_LOG_LEVEL=${influxd_log_level}
 
 bashio::log.info 'Starting InfluxDB v2.x...'
 

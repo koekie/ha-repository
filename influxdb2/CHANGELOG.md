@@ -1,8 +1,8 @@
-## What’s changed - Release v1.0.7
+## What’s changed - Release v1.1.0
 
 ## 🚀 Enhancements
 
-- Nill
+- Ingress working
 
 ## 🧰 Maintenance
 
@@ -10,10 +10,11 @@
 
 ## ⬆️ Dependency updates
 
-- Upgrade InfluxDB 2.7.1 and base image to 7.1.0
+- Upgrade InfluxDB 2.7.6-1, InfluxCLI 2.7.5 and base image to 7.3.3
 
 ## 📖 Full v1 Branch Changes
 
+- v1.1.0 - Update InfluxDB to 2.7.6-1, InfluxCLI to 2.7.5 and base image to 7.3.3. Got ingress working.
 - v1.0.7 - Upgrade InfluxDB 2.7.1 and base image to 7.1.0
 - v1.0.6 - Fixes a permission problem with services.d scripts
 - v1.0.5 - Fixes a permission problem with cont-init.d scripts

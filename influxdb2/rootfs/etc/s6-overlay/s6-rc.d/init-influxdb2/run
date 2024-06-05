@@ -1,14 +1,16 @@
-#!/usr/bin/with-contenv bashio
+#!/command/with-contenv bashio
+# shellcheck shell=bash
 # ==============================================================================
-# Jays Home Assistant Add-on: InfluxDB2
+# Home Assistant Add-on: InfluxDB2
 # Configures InfluxDB2
 # ==============================================================================
 declare certfile
 declare keyfile
 
+bashio::log.info "Preparing InfluxDB"
 # Configures usage reporting to InfluxDB based on add-on options
 if bashio::config.false 'reporting'; then
-    sed -i 's/reporting-disabled=.*/reporting-disabled=true/' /etc/influxdb/config.toml
+    sed -i 's/reporting-disabled= .*/reporting-disabled=true/' /etc/influxdb/config.toml
     bashio::log.info "Reporting of usage stats to InfluxData is disabled."
 fi
 
@@ -19,7 +21,7 @@ if bashio::config.true 'ssl'; then
     echo "tls-key = \"/ssl/${keyfile}\"" >> /etc/influxdb/config.toml
     echo "tls-min-version = \"1.2\"" >> /etc/influxdb/config.toml
     bashio::log.info "SSL enabled by configuration option 'SSL' = true"
-else 
+else
     sed -i '/^tls/d' /etc/influxdb/config.toml
     bashio::log.info "SSL disabled by configuration option 'SSL' = false"
 fi
